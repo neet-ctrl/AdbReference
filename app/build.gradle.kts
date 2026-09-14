@@ -20,6 +20,7 @@ plugins {
 android {
     namespace = "io.github.rhythmcache.dioxamine"
     compileSdk = 37
+    ndkVersion = "27.2.12479018"
 
     signingConfigs {
         create("release") {
@@ -40,6 +41,10 @@ android {
         versionCode = 10003
         versionName = "0.0.3-stable"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters += "arm64-v8a"
+        }
 
         vectorDrawables {
             useSupportLibrary = true
@@ -141,7 +146,7 @@ dependencies {
 //   - scrcpy-server.jar <- built from the "scrcpy" git submodule
 //   - pkg-dump.jar      <- PkgDump.java compiled against compileSdk android.jar
 //                         plus hidden-API stubs, then dexed with d8
-//   - dxls-<abi>        <- dxls.c cross-compiled for 4 ABIs via the NDK
+//   - dxls-arm64-v8a   <- dxls.c cross-compiled for the supported APK ABI
 //
 // All three are wired to run before preBuild.
 // -----------------------------------------------------------------------------
@@ -533,7 +538,7 @@ val buildDioxAgentJar =
     }
 
 // -----------------------------------------------------------------------------
-// Compile dxls.c for all 4 ABIs using the NDK toolchain.
+// Compile dxls.c for the supported arm64-v8a ABI using the NDK toolchain.
 // -----------------------------------------------------------------------------
 
 val buildDxlsNative =
@@ -665,12 +670,6 @@ val buildDxlsNative =
                 mapOf(
                     "arm64-v8a" to
                         "aarch64-linux-android21-clang",
-                    "armeabi-v7a" to
-                        "armv7a-linux-androideabi21-clang",
-                    "x86" to
-                        "i686-linux-android21-clang",
-                    "x86_64" to
-                        "x86_64-linux-android21-clang",
                 )
 
             targets.forEach { (arch, clang) ->
