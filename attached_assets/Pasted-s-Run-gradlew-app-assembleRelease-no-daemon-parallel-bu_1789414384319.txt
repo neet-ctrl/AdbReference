@@ -1,0 +1,178 @@
+s
+Run ./gradlew :app:assembleRelease --no-daemon --parallel --build-cache
+Downloading https://services.gradle.org/distributions/gradle-9.6.1-bin.zip
+.............10%.............20%..............30%.............40%..............50%.............60%.............70%..............80%.............90%..............100%
+Welcome to Gradle 9.6.1!
+Here are the highlights of this release:
+ - Improved Configuration Cache hit rates
+ - Additional CLI rendering options
+ - Important project hierarchy lookup deprecations
+For more details see https://docs.gradle.org/9.6.1/release-notes.html
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.6.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Configure project :app
+WARNING: The option setting 'android.nonFinalResIds=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+> Task :app:compileDioxAgentStub
+> Task :app:jarDioxAgentStub
+> Task :app:compileDioxAgentJava
+Note: /home/runner/work/AdbReference/AdbReference/src_ext/DioxAgent.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+> Task :app:dexDioxAgent
+diox-agent.jar -> /home/runner/work/AdbReference/AdbReference/app/src/main/assets/diox-agent.jar
+> Task :app:buildDioxAgentJar
+> Task :app:buildDxlsNative
+arm64-v8a dxls built
+> Task :scrcpy:server:preBuild UP-TO-DATE
+> Task :scrcpy:server:preReleaseBuild UP-TO-DATE
+> Task :scrcpy:server:mergeReleaseJniLibFolders
+> Task :scrcpy:server:mergeReleaseNativeLibs NO-SOURCE
+> Task :scrcpy:server:stripReleaseDebugSymbols NO-SOURCE
+> Task :scrcpy:server:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :scrcpy:server:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :scrcpy:server:checkReleaseDuplicateClasses
+> Task :scrcpy:server:generateReleaseBuildConfig
+> Task :scrcpy:server:generateReleaseResources
+> Task :scrcpy:server:packageReleaseResources
+> Task :scrcpy:server:processReleaseNavigationResources
+> Task :scrcpy:server:javaPreCompileRelease
+> Task :scrcpy:server:checkReleaseAarMetadata
+> Task :scrcpy:server:mapReleaseSourceSetPaths
+> Task :scrcpy:server:compileReleaseAidl
+> Task :scrcpy:server:parseReleaseLocalResources
+> Task :scrcpy:server:compileReleaseNavigationResources
+> Task :scrcpy:server:mergeReleaseResources
+> Task :scrcpy:server:createReleaseCompatibleScreenManifests
+> Task :scrcpy:server:extractDeepLinksRelease
+> Task :scrcpy:server:generateReleaseRFile
+> Task :scrcpy:server:processReleaseMainManifest
+> Task :scrcpy:server:compileReleaseKotlin NO-SOURCE
+> Task :scrcpy:server:compileReleaseJavaWithJavac
+> Task :scrcpy:server:processReleaseManifest
+> Task :scrcpy:server:desugarReleaseFileDependencies
+> Task :scrcpy:server:mergeReleaseStartupProfile
+> Task :app:buildScrcpyServer
+> Task :scrcpy:server:mergeReleaseArtProfile
+> Task :scrcpy:server:processReleaseManifestForPackage
+> Task :scrcpy:server:generateReleaseAssets UP-TO-DATE
+> Task :scrcpy:server:mergeReleaseAssets
+> Task :scrcpy:server:compressReleaseAssets
+> Task :scrcpy:server:processReleaseResources
+> Task :scrcpy:server:extractReleaseVersionControlInfo
+> Task :scrcpy:server:mergeExtDexRelease
+> Task :scrcpy:server:dexBuilderRelease
+> Task :scrcpy:server:mergeReleaseGlobalSynthetics
+> Task :scrcpy:server:extractProguardFiles
+> Task :scrcpy:server:generateReleaseLintVitalReportModel
+> Task :scrcpy:server:mergeDexRelease
+> Task :scrcpy:server:compileReleaseArtProfile
+> Task :scrcpy:server:processReleaseJavaRes NO-SOURCE
+> Task :scrcpy:server:collectReleaseDependencies
+> Task :scrcpy:server:sdkReleaseDependencyData
+> Task :scrcpy:server:writeReleaseAppMetadata
+> Task :scrcpy:server:optimizeReleaseResources
+> Task :scrcpy:server:writeReleaseSigningConfigVersions
+> Task :scrcpy:server:mergeReleaseJavaResource
+> Task :scrcpy:server:lintVitalAnalyzeRelease
+> Task :scrcpy:server:lintVitalReportRelease
+> Task :scrcpy:server:lintVitalRelease
+> Task :scrcpy:server:packageRelease
+> Task :scrcpy:server:createReleaseApkListingFileRedirect
+> Task :scrcpy:server:assembleRelease
+> Task :app:buildScrcpyServer
+scrcpy-server.jar -> /home/runner/work/AdbReference/AdbReference/app/src/main/assets/scrcpy-server.jar
+> Task :app:preBuild
+> Task :app:preReleaseBuild
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseNativeLibs
+> Task :app:generateReleaseBuildConfig
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:generateReleaseResources
+> Task :app:stripReleaseDebugSymbols
+> Task :app:packageReleaseResources
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:processReleaseNavigationResources
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:javaPreCompileRelease
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:checkReleaseAarMetadata FAILED
+> Task :app:parseReleaseLocalResources
+> Task :app:compileReleaseNavigationResources
+[Incubating] Problems report is available at: file:///home/runner/work/AdbReference/AdbReference/build/reports/problems/problems-report.html
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+FAILURE: Build failed with an exception.
+* What went wrong:
+For more on this, please refer to https://docs.gradle.org/9.6.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+20 actionable tasks: 20 executed
+Execution failed for task ':app:checkReleaseAarMetadata' (registered by plugin 'com.android.internal.application').
+> A failure occurred while executing com.android.build.gradle.internal.tasks.CheckAarMetadataWorkAction
+   > 4 issues were found when checking AAR metadata:
+     
+       1.  Dependency 'androidx.core:core:1.19.0' requires libraries and applications that
+           depend on it to compile against version 37 or later of the
+           Android APIs.
+     
+           :app is currently compiled against android-36.
+     
+           Recommended action: Update this project to use a newer compileSdk
+           of 37.
+     
+           Note that updating a library or application's compileSdk (which
+           allows newer APIs to be used) can be done separately from updating
+           targetSdk (which opts the app in to new runtime behavior) and
+           minSdk (which determines which devices the app can be installed
+           on).
+     
+       2.  Dependency 'androidx.lifecycle:lifecycle-runtime-compose-android:2.11.0' requires libraries and applications that
+           depend on it to compile against version 37 or later of the
+           Android APIs.
+     
+           :app is currently compiled against android-36.
+     
+           Recommended action: Update this project to use a newer compileSdk
+           of 37.
+     
+           Note that updating a library or application's compileSdk (which
+           allows newer APIs to be used) can be done separately from updating
+           targetSdk (which opts the app in to new runtime behavior) and
+           minSdk (which determines which devices the app can be installed
+           on).
+     
+       3.  Dependency 'androidx.lifecycle:lifecycle-viewmodel-compose-android:2.11.0' requires libraries and applications that
+           depend on it to compile against version 37 or later of the
+           Android APIs.
+     
+           :app is currently compiled against android-36.
+     
+           Recommended action: Update this project to use a newer compileSdk
+           of 37.
+     
+           Note that updating a library or application's compileSdk (which
+           allows newer APIs to be used) can be done separately from updating
+           targetSdk (which opts the app in to new runtime behavior) and
+           minSdk (which determines which devices the app can be installed
+           on).
+     
+       4.  Dependency 'androidx.core:core-ktx:1.19.0' requires libraries and applications that
+           depend on it to compile against version 37 or later of the
+           Android APIs.
+     
+           :app is currently compiled against android-36.
+     
+           Recommended action: Update this project to use a newer compileSdk
+           of 37.
+     
+           Note that updating a library or application's compileSdk (which
+           allows newer APIs to be used) can be done separately from updating
+           targetSdk (which opts the app in to new runtime behavior) and
+           minSdk (which determines which devices the app can be installed
+           on).
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+BUILD FAILED in 2m 34s
+Error: Process completed with exit code 1.
