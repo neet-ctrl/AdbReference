@@ -42,7 +42,7 @@ jobs:
         shell: bash
         run: |
           sdkmanager \
-            "platforms;android-37" \
+            "platforms;android-36" \
             "build-tools;35.0.0" \
             "ndk;27.2.12479018"
 
